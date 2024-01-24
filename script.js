@@ -5,6 +5,21 @@ const images = [
     'Images/Background/ringBackground.jpg',
     'Images/Boxer1Element/idle/boxing1Idle.png',
     'Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_000.png',
+    'Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_001.png',
+    'Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_002.png',
+    'Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_003.png',
+    'Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_004.png',
+    'Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_005.png',
+
+    'Images/Boxer2Element/idle/boxer2Idle.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_000.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_001.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_002.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_003.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_004.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_005.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_006.png',
+    'Images/Boxer2Element/punch/__Boxer2_Punch1_007.png',
   ];
   
 function preloadImages(urls) {
