@@ -1,0 +1,176 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('Images/Background/ringBackground.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+p {
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  color: white;
+  text-decoration: underline 5px
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+/* ==== Player ==== */
+.player {
+  margin: 20px 225px;
+  text-align: center;
+}
+
+.player img {
+  width: 400px;
+  height: auto;
+}
+
+#player1 .animation {
+  position: absolute;
+  left: 580px;
+  bottom: 110px;
+  height: 340px;
+  width: 340px;
+  background-image: url('Images/Boxer1Element/idle/boxing1Idle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: none;
+}
+
+#player1 .animation.playing-animation {
+  animation: player1Animation 0.12s steps(6) forwards;
+}
+
+#player2 .animation {
+  margin-left: -255px;
+  margin-top: 345px;
+  height: 340px;
+  width: 340px;
+  background-image: url('Images/Boxer2Element/idle/boxer2Idle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: none;
+}
+
+#player2 .animation.playing-animation {
+  animation: player2Animation 0.1s steps(8) forwards;
+}
+
+@keyframes player1Animation {
+  0% { background-image: url('Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_000.png'); }
+  20% { background-image: url('Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_001.png'); }
+  40% { background-image: url('Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_002.png'); }
+  60% { background-image: url('Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_003.png'); }
+  80% { background-image: url('Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_004.png'); }
+  100% { background-image: url('Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_005.png'); }
+}
+
+@keyframes player2Animation {
+  0% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_000.png'); }
+  14.28% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_001.png'); }
+  28.56% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_002.png'); }
+  42.84% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_003.png'); }
+  57.12% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_004.png'); }
+  71.4% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_005.png'); }
+  85.68% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_006.png'); }
+  100% { background-image: url('Images/Boxer2Element/punch/__Boxer2_Punch1_007.png'); }
+}
+
+
+
+/* ==== Life bar Style ===== */
+.life-bar {
+  height: 30px;
+  width: 450px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.inner-bar {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.life-bar.red .inner-bar {
+  background-color: red;
+}
+
+.life-bar.yellow .inner-bar {
+  background-color: yellow;
+}
+
+.life-bar.green .inner-bar {
+  background-color: green;
+}
+
+
+
+/* ===== Partie Overlay ( à la fin de la partie ) ===== */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+body.game-ended .container {
+  filter: blur(5px);
+}
+
+#restart-button {
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#restart-button:hover {
+  background-color: #2980b9;
+}
+
+
+
+/*===== Style pour button musique =====*/
+#playMusicButton {
+  width: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="player1" class="player">
+            <h2>Boxer 1</h2>
+            <div id="lifeBar2" class="life-bar green">
+                <div class="inner-bar"></div>
+            </div>
+            <p id="score1">0</p>
+            <div class="animation"></div>
+        </div>
+        <div id="player2" class="player">
+            <h2>Boxer 2</h2>
+            <div id="lifeBar1" class="life-bar green">
+                <div class="inner-bar"></div>
+            </div>
+            <p id="score2">0</p>
+            <div class="animation"></div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="winner-message"></h2>
+            <button id="restart-button" onclick="restartGame()">Restart</button>
+        </div>
+    </div>
+
+    <img id="playMusicButton" src="Music/sound--off.png" alt="Play Music">
+    <audio id="backgroundMusic" loop>
+        <source src="Music/boxing_ring.wav" type="audio/wav">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
