@@ -1,4 +1,22 @@
 ////////////////////////////////////
+// Preload.
+////////////////////////////////////
+const images = [
+    'Images/Background/ringBackground.jpg',
+    'Images/Boxer1Element/idle/boxing1Idle.png',
+    'Images/Boxer1Element/punchLeft/__Boxing04_PunchLeft_000.png',
+  ];
+  
+function preloadImages(urls) {
+    urls.forEach(function(url) {
+        var img = new Image();
+        img.src = url;
+    });
+};
+preloadImages(images);
+  
+
+////////////////////////////////////
 // Variables.
 ////////////////////////////////////
 
