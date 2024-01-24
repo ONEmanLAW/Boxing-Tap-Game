@@ -46,7 +46,7 @@ document.getElementById('player2').addEventListener('click', () => {
 
 document.addEventListener('keydown', (event) => {
     if (!gameEnded) {
-        if (event.key === ' ') {
+        if (event.key === 'q'  || event.key === 'Q') {
             if (!keyIsPressedPlayer1) {
                 keyIsPressedPlayer1 = true;
                 score1++;
@@ -55,7 +55,7 @@ document.addEventListener('keydown', (event) => {
                 checkGameOver();
                 playAnimation('player1');
             }
-        } else if (event.key === '0') {
+        } else if (event.key === 'm' || event.key === 'M') {
             if (!keyIsPressedPlayer2) {
                 keyIsPressedPlayer2 = true;
                 score2++;
@@ -70,9 +70,9 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keyup', (event) => {
     // Réinitialise l'état de la touche pour le joueur 1 et 2 si keyisPressed
-    if (event.key === ' ') {
+    if (event.key === 'q'  || event.key === 'Q') {
         keyIsPressedPlayer1 = false;
-    } else if (event.key === '0') {
+    } else if (event.key === 'm' || event.key === 'M') {
         keyIsPressedPlayer2 = false;
     }
 });
